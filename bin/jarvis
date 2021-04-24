@@ -1,0 +1,29 @@
+#!/bin/bash
+
+say_hello() {
+  echo "
+     ██╗ █████╗ ██████╗ ██╗   ██╗██╗███████╗
+     ██║██╔══██╗██╔══██╗██║   ██║██║██╔════╝
+     ██║███████║██████╔╝██║   ██║██║███████╗
+██   ██║██╔══██║██╔══██╗╚██╗ ██╔╝██║╚════██║
+╚█████╔╝██║  ██║██║  ██║ ╚████╔╝ ██║███████║
+ ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚══════╝
+  "
+  echo "Jarvis 1.1 is live. What can I do for you sir"
+}
+
+invalid_operation() {
+  echo "Sorry. I do not understand. This operation might not be supported"
+}
+
+task() {
+  python $JARVISHOME/task.py $1 $2 $3
+}
+
+if [ $# -eq 0 ]; then
+  say_hello
+elif [ $1 == 'task' ]; then
+  task $2 $3 $4
+else
+  invalid_operation
+fi
