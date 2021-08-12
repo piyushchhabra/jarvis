@@ -1,10 +1,10 @@
 import sys
-import utils
+from utils import utils
 
 
 def print_tasks():
     print("Select your task:")
-    print("1. Test Here")
+    print("1. test")
 
 
 def check_min_args(count, msg="Incorrect number of arguments"):
@@ -28,6 +28,3 @@ if __name__ == '__main__':
     else:
         utils.log_error("Unknown task for jarvis. Check available tasks:")
         print_tasks()
-
-
-

@@ -17,7 +17,7 @@ invalid_operation() {
 }
 
 task() {
-  python $JARVISHOME/task.py $1 $2 $3
+  python3 $JARVISHOME/task.py $1 $2 $3
 }
 
 if [ $# -eq 0 ]; then
