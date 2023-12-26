@@ -1,3 +1,4 @@
+import itertools
 import sys
 import time
 import datetime
@@ -44,3 +45,11 @@ def log_bold(msg):
 
 def log_bold_underline(msg):
     print(bcolors.UNDERLINE + bcolors.BOLD + msg + '\033[0m')
+
+
+def shortenString(msg, maxlen):
+    return msg[:maxlen]
+
+
+def flatten_lists(multiLists):
+    return list(itertools.chain.from_iterable(multiLists))
